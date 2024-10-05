@@ -1,13 +1,11 @@
-"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
+import react, { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../../lib/utils";
-
+import axios from "axios";
 export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
-  onSubmit
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
 
@@ -43,6 +41,8 @@ export function PlaceholdersAndVanishInput({
   const inputRef = useRef(null);
   const [value, setValue] = useState("");
   const [animating, setAnimating] = useState(false);
+
+
 
   const draw = useCallback(() => {
     if (!inputRef.current) return;
@@ -184,6 +184,8 @@ export function PlaceholdersAndVanishInput({
         onChange={(e) => {
           if (!animating) {
             setValue(e.target.value);
+            console.log(value,'placeholder data gotted');
+            
             onChange && onChange(e);
           }
         }}
@@ -195,7 +197,10 @@ export function PlaceholdersAndVanishInput({
           "w-full relative text-sm sm:text-base z-50 border-none dark:text-white bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
           animating && "text-transparent dark:text-transparent"
         )} />
+
+        {/* ..................... */}
       <button
+      // onClick={getGPTResponse}
         disabled={!value}
         type="submit"
         className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center">
@@ -228,6 +233,7 @@ export function PlaceholdersAndVanishInput({
           <path d="M13 6l6 6" />
         </motion.svg>
       </button>
+      {/* ................ */}
       <div
         className="absolute inset-0 flex items-center rounded-full pointer-events-none">
         <AnimatePresence mode="wait">

@@ -6,14 +6,7 @@ export function BackgroundLinesDemo() {
     <BackgroundLines className="flex justify-center   bg-black">
       <div className=" flex justify-center">
       <TextRevealCardPreview />
-
-      </div>
-
-
-      <div className= " flex justify-center">
-      </div>
-
-     
+      </div> 
     </BackgroundLines>
   );
 }

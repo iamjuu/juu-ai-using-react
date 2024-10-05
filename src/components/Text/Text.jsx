@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Cat from "../../assets/cat/cat.png";
 import {
@@ -16,14 +15,12 @@ export function TextRevealCardPreview() {
           text="How can we help you?"
           revealText="How are you guys?"
         >
-          {/* <TextRevealCardTitle>Welcome!</TextRevealCardTitle> */}
         </TextRevealCard>
         <div className="w-28">
         <img src={Cat} alt="" />
 
         </div>
      <div>
-
       <PlaceholdersAndVanishInputDemo/>
      </div>
       </div>

@@ -3,7 +3,7 @@ import { BackgroundLinesDemo } from '../../components/Background/Background';
 const Home = () => {
   return (
   <>
-  <div >
+  <div  className='bg-black '>
 
   <BackgroundLinesDemo/>
   </div>
