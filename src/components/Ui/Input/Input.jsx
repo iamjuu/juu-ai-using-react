@@ -41,6 +41,8 @@ export function PlaceholdersAndVanishInput({
   const inputRef = useRef(null);
   const [value, setValue] = useState("");
   const [animating, setAnimating] = useState(false);
+// .......................
+
 
 
 

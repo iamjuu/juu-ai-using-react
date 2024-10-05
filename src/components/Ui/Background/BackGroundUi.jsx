@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "../../lib/utils";
 import { motion } from "framer-motion";
 import React from "react";
@@ -8,11 +9,13 @@ export const BackgroundLines = ({
   svgOptions
 }) => {
   return (
+
     (<div
-      className={cn("h-[20rem] md:h-screen w-full bg-black dark:bg-black", className)}>
+      className={cn(" md:h-[300px]    lg:h-screen  sm:h-screen    w-full    bg-slate-500  flex justify-center items-center  ", className)}>
       <SVG svgOptions={svgOptions} />
       {children}
     </div>)
+
   );
 };
 
@@ -76,7 +79,9 @@ const SVG = ({
     "#604483",
   ];
   return (
-    (<motion.svg
+
+
+    (   <motion.svg
       viewBox="0 0 1440 900"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
