@@ -9,7 +9,7 @@ export function BackgroundLinesDemo() {
   const { contextMessages } = useContext(ResponseContext); // Get messages from context  
 
   return (  
-    <BackgroundLines className="    bg-black   justify-center items-center md:h-screen text-white flex flex-col">  
+    <BackgroundLines className="    bg-black  h-full  justify-center items-center  text-white flex flex-col">  
       <img  
         className="w-40 hover:scale-110 transition-transform duration-300"  
         src={Cat}  
@@ -25,25 +25,24 @@ export function BackgroundLinesDemo() {
       <PlaceholdersAndVanishInputDemo />  
         </div>
 
-      <div className="w-full h-full  flex justify-center items-center">  
-        <div className="w-[1300px] max-w-full flex">  
-          {/* <div className="w-[30%] p-3  text-justify">  
-            <h1 className="text-3xl">History</h1>  
-            <p>  
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.  
-              Repudiandae, deleniti pariatur dolore voluptates aperiam commodi  
-              cumque itaque excepturi officiis delectus tempore culpa nulla  
-              voluptate incidunt illum omnis nesciunt esse ipsum.  
-            </p>  
-          </div>   */}
+      <div className="w-full bg-transparent  relative h-full flex justify-center items-center">  
+        <div className="w-[1300px] max-w-full  justify-center items-center flex">  
+      
 
-          <div className="w-[70%]  text-green-300 p-3 ">  
-            {contextMessages.map((item, index) => (  
-              <div key={index}>  
-                <p >{item.role }: {item.content}</p>  {/* Displays role and content */}  
-              </div>  
-            ))}  
-          </div>  
+        <div className="w-[70%] text-white mt-5 flex gap-1 flex-col">  
+  {contextMessages.map((item, index) => (  
+    <div 
+      key={index} 
+      className="border  border-gray-600 p-2 rounded-md"
+    >  
+   
+
+      <span className="text-lg text-red-600">{item.role}:</span>  
+      <span>{item.content}</span>
+    </div>
+  ))}  
+</div>  
+
         </div>  
       </div>  
     </BackgroundLines>  
