@@ -9,6 +9,7 @@ import { ResponseContext } from "../../context/Contextdata"; // Adjust path acco
 export function PlaceholdersAndVanishInput({ placeholders }) {
   const { contextMessages, setContextMessages } = useContext(ResponseContext); // Use context here
   const API_KEY = "AIzaSyCpyIMPMAzQOKJ-G9ZyTaxbw-7ujzKc7Lg";
+  // const  API_KEY = REACT_APP_OPENAI_API_KEY
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
   const intervalRef = useRef(null);
   const [value, setValue] = useState("");
@@ -221,7 +222,7 @@ export function PlaceholdersAndVanishInput({ placeholders }) {
   return (
     <form
       className={cn(
-        "w-full relative max-w-xl mx-auto bg-white dark:bg-zinc-800 h-12 rounded-full overflow-hidden shadow transition duration-200",
+        "  relative  bg-white max-w-xl mx-auto  dark:bg-zinc-800 h-12 rounded-full overflow-hidden shadow transition duration-200",
         value && "bg-gray-50"
       )}
       onSubmit={handleSubmit}

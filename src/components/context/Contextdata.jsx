@@ -16,8 +16,11 @@ export const ResponseProvider = ({ children }) => {
   };  
 
   return (  
+    <div className='bg-black h-screen'>
+
     <ResponseContext.Provider value={{ contextMessages, setContextMessages }}>  
       {children}  
     </ResponseContext.Provider>  
+    </div>
   );  
 };

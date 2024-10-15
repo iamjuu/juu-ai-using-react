@@ -11,7 +11,7 @@ export const BackgroundLines = ({
   return (
 
     (<div
-      className={cn("     w-full    bg-black  flex justify-center items-center  ", className)}>
+      className={cn("         flex justify-center items-center  ", className)}>
       <SVG svgOptions={svgOptions} />
       {children}
     </div>)
