@@ -175,7 +175,13 @@ export function PlaceholdersAndVanishInput({ placeholders }) {
       return " ഹാ  Juu പറയടാ";
     }
     if ([  "adhil"].includes(prompt.toLowerCase())) {
-      return "ഹാ adhil__adhiii ഇതാണ് അവന്റെ instagram id. അവൻ ഒരു കൊച്ചു മൈരൻ ആണ്. അവനെ കുറിച് കൂടുതൽ ഒന്നും ചോദിക്കരുത്.എനിക്ക് ഇഷ്ട്ടം അല്ല";
+      return "ഹാ adhil__adhiii ഇതാണ് അവന്റെ instagram id. അവനെ കുറിച് കൂടുതൽ ഒന്നും ചോദിക്കരുത്.എനിക്ക് ഇഷ്ട്ടം അല്ല";
+    }
+    if ([  "vishnu priya"].includes(prompt.toLowerCase())) {
+      return " she was a psychologist. ";
+    }
+    if(['athulya kannur'].includes(prompt.toLowerCase())) {
+      return "അതുല്യ അവൾ ഒരു ജാട തെണ്ടിയാണ്. ഇപ്പൊൽ അവൻ ഐഎസ്  അവൻ ശ്രെമിച്ചു കൊണ്ടിരിക്കുന്നു"
     }
     try {
       const response = await axios.post(

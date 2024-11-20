@@ -29,7 +29,7 @@ export function PlaceholdersAndVanishInputDemo() {
     ]);
   };
   return (
-    <div className="   flex   flex-col justify-center    mt-5  items-center ">
+    <div className="   flex     flex-col justify-center    mt-5  items-center ">
       <PlaceholdersAndVanishInput placeholders={placeholders} />
     </div>
   );
