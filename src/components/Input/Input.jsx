@@ -10,26 +10,9 @@ export function PlaceholdersAndVanishInputDemo() {
     ,
   ];
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { role: "user", content: value },
-    ]);
-    setValue("");
-
-    const response = await getGeminiResponse(value);
-    setMessages((prevMessages) => [
-      ...prevMessages,
-      { role: "assistant", content: response },
-    ]);
-  };
+ 
   return (
-    <div className="   flex     flex-col justify-center    mt-5  items-center ">
+    <div className="   flex   flex-col justify-center    mt-5  items-center ">
       <PlaceholdersAndVanishInput placeholders={placeholders} />
     </div>
   );
