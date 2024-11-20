@@ -2,7 +2,7 @@ import { PlaceholdersAndVanishInput } from "../../components/Ui/Input/InputUi";
 
 export function PlaceholdersAndVanishInputDemo() {
   const placeholders = [
-    "Hey this juu-ai",
+    "Hey, this is juu-ai",
     "You can ask anything ",
     "മലയാളത്തിൽ തിരക്കു.",
     "ഒന്നും പേടിക്കണ്ടാ ",
